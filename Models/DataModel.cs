@@ -1,5 +1,6 @@
 ﻿using Bluetooth;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
@@ -12,21 +13,28 @@ using System.Windows.Forms;
 
 namespace BTDeviceTemparatureMonitor.Models
 {
-    public class TemparatureDataModel: IDataModel
+    public class DataModel: IDataModel
     {
         BluetoothAdapter btAdapter ;
         Stream peerStream = null;
+        ConcurrentQueue<int[]> packetstream = new ConcurrentQueue<int[]>();
 
         private double mCurrentTemparature;
         private double mHighestTemparature;
+
+        private double mCurrentHumidity;
 
         public event TempartureChangeEventHandler CurrentTemparatureChanged;
         public event TempartureChangeEventHandler HighestTemparatureChanged;
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public event HumidityChangeEventHandler CurrentHumidityChanged;
 
         public delegate void TempartureChangeEventHandler(
-    object sender, TemparatureEventArgs args);
+         object sender, TemparatureEventArgs args);
+
+        public delegate void HumidityChangeEventHandler(
+         object sender, HumidityEventArgs args);
 
         public class TemparatureEventArgs : EventArgs
         {
@@ -34,6 +42,10 @@ namespace BTDeviceTemparatureMonitor.Models
             public double HighestTemp { get; set; }
         }
 
+        public class HumidityEventArgs : EventArgs
+        {
+            public double currentHumid { get; set; }
+        }
         // This method is called by the Set accessor of each property.
         // The CallerMemberName attribute that is applied to the optional propertyName
         // parameter causes the property name of the caller to be substituted as an argument.
@@ -45,7 +57,7 @@ namespace BTDeviceTemparatureMonitor.Models
             }
         }
 
-        public TemparatureDataModel()
+        public DataModel()
         {
             BtAdapter = new BluetoothAdapter();
         }
@@ -92,6 +104,26 @@ namespace BTDeviceTemparatureMonitor.Models
             }
         }
 
+        public double CurrentHumidity
+        {
+            get
+            {
+                return this.mCurrentHumidity;
+            }
+
+            set
+            {
+                if (value != this.mCurrentHumidity)
+                {
+                    this.mCurrentHumidity = value;
+                    //NotifyPropertyChanged();
+                    var args = new HumidityEventArgs();
+                    args.currentHumid = this.CurrentHumidity;
+                    CurrentHumidityChanged(this, args);
+                }
+            }
+        }
+
         public BluetoothAdapter BtAdapter { get => btAdapter; set => btAdapter = value; }
 
         public void DiscoverDevices()
@@ -110,46 +142,84 @@ namespace BTDeviceTemparatureMonitor.Models
             BtAdapter.Disconnect();
         }
 
-        public double ReadTemparature()
+        public void PollSensorData()
         {
-            byte[] data = new byte[100];
-            int blocklength = 0;
-            int[] sensordata = new int[100];
-            int i = 0;
-            int currentdata = 0; 
+            int[] receivedpacket;
+
             
-            var currentbyte = peerStream.ReadByte();
+            packetstream.TryDequeue(out receivedpacket);
 
-            if (currentbyte == 0xA5)
+            if (receivedpacket != null)
             {
-                blocklength = (int)peerStream.ReadByte();
-            }
+                int j = 0;
+                var query = from s in receivedpacket
+                            let num = j++
+                            group s by num / 2 into g
+                            select g.ToArray();
+                var results = query.ToArray();
 
-            do
-            {
-                sensordata[i] = peerStream.ReadByte();
-                currentdata = sensordata[i];
-                i++;
-            } while (currentdata != 0x5a);
+                var firstsensordata = results[0];
+                var secondsensordata = results[1];
 
-            var tempsensorvalue = sensordata[i - 2] << 8 | sensordata[i - 3];
-            var fTempVoltageValue = (tempsensorvalue / 4095.0) * 3.3;
-            var fTempValue = -0.193 * (fTempVoltageValue * 1000) + 212.009;
+                int humidity = firstsensordata[1] << 8 | firstsensordata[0];
+                humidity = humidity / 100;
 
-            if (fTempValue !=CurrentTemparature)
-            {
-                CurrentTemparature = fTempValue;
-                if (HighestTemparature == 0)
+                CurrentHumidity = humidity;
+
+
+                var tempsensorvalue = secondsensordata[1] << 8 | secondsensordata[0];
+                var fTempVoltageValue = (tempsensorvalue / 4095.0) * 3.3;
+                var fTempValue = -0.193 * (fTempVoltageValue * 1000) + 212.009;
+
+                if (fTempValue != CurrentTemparature)
+                {
+                    CurrentTemparature = fTempValue;
+                    if (HighestTemparature == 0)
+                    {
+                        HighestTemparature = CurrentTemparature;
+                    }
+                }
+
+                if (CurrentTemparature > HighestTemparature)
                 {
                     HighestTemparature = CurrentTemparature;
                 }
             }
 
-            if (CurrentTemparature > HighestTemparature)
-            {
-                HighestTemparature = CurrentTemparature;
-            }
-            return fTempValue;
         }
+
+        public void ReadDataStream()
+        {
+            int[] sensordata;
+            int i;
+
+            byte[] data = new byte[100];
+            int blocklength = 0;
+            sensordata = new int[100];
+            int[] datapacket = new int[20];
+            i = 0;
+            int currentdata = 0;
+
+            if (peerStream.CanRead)
+            {
+                var currentbyte = peerStream.ReadByte();
+
+                if (currentbyte == 0xA5)
+                {
+                    blocklength = (int)peerStream.ReadByte();
+                }
+
+                do
+                {
+                    sensordata[i] = peerStream.ReadByte();
+                    currentdata = sensordata[i];
+                    i++;
+                } while (currentdata != 0x5a);
+
+                packetstream.Enqueue(sensordata.Take(blocklength * 2).ToArray());
+            }
+
+        }
+
     }
 }

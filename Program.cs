@@ -20,7 +20,7 @@ namespace BTDeviceTemparatureMonitor
             Application.SetCompatibleTextRenderingDefault(false);
 
             var mainForm = new Mainform();
-            var presenter = new DashboardViewPresenter(mainForm, new TemparatureDataModel());
+            var presenter = new DashboardViewPresenter(mainForm, new DataModel());
 
             Application.Run(mainForm);
         }

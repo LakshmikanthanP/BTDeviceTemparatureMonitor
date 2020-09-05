@@ -16,7 +16,8 @@ namespace BTDeviceTemparatureMonitor.Presenter
         private readonly IDataModel _dataValuerespository;
         AutoResetEvent discoverevent = new AutoResetEvent(false);
 
-        Thread pollingthread;
+        Thread pollingdatastreamthread;
+        Thread pollingsensorthread;
 
         public DashboardViewPresenter(IMainformView view, IDataModel dataValuerespository)
         {
@@ -30,6 +31,9 @@ namespace BTDeviceTemparatureMonitor.Presenter
 
             _dataValuerespository.CurrentTemparatureChanged += _view.OnCurrentTemparatureChanged;
             _dataValuerespository.HighestTemparatureChanged += _view.OnHighestTemparatureChanged;
+
+            _dataValuerespository.CurrentHumidityChanged += _view.OnCurrentHumidityChanged;
+
         }
 
         private void OnSelectedIndexChanged(object sender, EventArgs e)
@@ -41,8 +45,8 @@ namespace BTDeviceTemparatureMonitor.Presenter
         private void OnDisconnectDevice(object sender, EventArgs e)
         {
             _dataValuerespository.DisConnectDevice();
-            pollingthread.Abort();
-            _view.ExecuteDelegateOnUIThread(new Action(() => _view.DeviceDisconnected()));
+            pollingdatastreamthread.Abort();
+            _view.ExecuteDelegateOnUIThread(new Action(() => _view.OnDeviceDisconnected()));
         }
 
         private void OnDiscoverDevices(object sender, EventArgs e)
@@ -58,7 +62,7 @@ namespace BTDeviceTemparatureMonitor.Presenter
         private void Discoverend()
         {
             discoverevent.WaitOne();
-            _view.ExecuteDelegateOnUIThread(new Action(() => _view.DiscoveryCompleted(_dataValuerespository.BtAdapter)));
+            _view.ExecuteDelegateOnUIThread(new Action(() => _view.OnDiscoveryCompleted(_dataValuerespository.BtAdapter)));
         }
 
         private void Discover()
@@ -70,9 +74,28 @@ namespace BTDeviceTemparatureMonitor.Presenter
         private void OnConnectDevice(object sender, EventArgs e)
         {
             _dataValuerespository.ConnectDevice();
-            _view.ExecuteDelegateOnUIThread(new Action(() => _view.DeviceConnected(_dataValuerespository.BtAdapter.Device)));
-            pollingthread = new Thread(new ThreadStart(DevicePollingThread));
-            pollingthread.Start();
+            _view.ExecuteDelegateOnUIThread(new Action(() => _view.OnDeviceConnected(_dataValuerespository.BtAdapter.Device)));
+            pollingdatastreamthread = new Thread(new ThreadStart(DevicePollingThread));
+            pollingdatastreamthread.Start();
+
+            pollingsensorthread = new Thread(new ThreadStart(SensorDataPollingThread));
+            pollingsensorthread.Start();
+        }
+
+        private void SensorDataPollingThread()
+        {
+            try
+            {
+                while (true)
+                {
+                    _dataValuerespository.PollSensorData();
+                    Thread.Sleep(100);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         private void DevicePollingThread()
@@ -81,13 +104,13 @@ namespace BTDeviceTemparatureMonitor.Presenter
             {
                 while (true)
                 {
-                   var currenttemp =  _dataValuerespository.ReadTemparature();                      
+                   _dataValuerespository.ReadDataStream();                      
                     Thread.Sleep(100);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
 

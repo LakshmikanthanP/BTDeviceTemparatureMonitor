@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static BTDeviceTemparatureMonitor.Models.TemparatureDataModel;
+using static BTDeviceTemparatureMonitor.Models.DataModel;
 
 namespace BTDeviceTemparatureMonitor
 {
@@ -23,12 +23,13 @@ namespace BTDeviceTemparatureMonitor
 
         void DiscoveryStarted();
 
-        void DeviceConnected(BluetoothDeviceInfo btDevice);
+        void OnDeviceConnected(BluetoothDeviceInfo btDevice);
 
-        void DeviceDisconnected();
+        void OnDeviceDisconnected();
 
-        void DiscoveryCompleted(BluetoothAdapter btAdapter);
+        void OnDiscoveryCompleted(BluetoothAdapter btAdapter);
 
         void ExecuteDelegateOnUIThread(Delegate action);
+        void OnCurrentHumidityChanged(object sender, HumidityEventArgs args);
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Bluetooth;
 using System;
-using static BTDeviceTemparatureMonitor.Models.TemparatureDataModel;
+using static BTDeviceTemparatureMonitor.Models.DataModel;
 
 namespace BTDeviceTemparatureMonitor.Models
 {
@@ -8,10 +8,15 @@ namespace BTDeviceTemparatureMonitor.Models
     {
         double CurrentTemparature { get; set; }
         double HighestTemparature { get; set; }
+
+        double CurrentHumidity{ get; set; }
+
         BluetoothAdapter BtAdapter { get; set; }
 
-         event TempartureChangeEventHandler CurrentTemparatureChanged;
-         event TempartureChangeEventHandler HighestTemparatureChanged;
+        event TempartureChangeEventHandler CurrentTemparatureChanged;
+        event TempartureChangeEventHandler HighestTemparatureChanged;
+
+        event HumidityChangeEventHandler CurrentHumidityChanged;
 
         void DiscoverDevices();
 
@@ -19,6 +24,9 @@ namespace BTDeviceTemparatureMonitor.Models
 
         void DisConnectDevice();
 
-        double ReadTemparature();
+        void ReadDataStream();
+
+        void PollSensorData();
+
     }
 }
