@@ -17,7 +17,6 @@ namespace Bluetooth
 
         public BluetoothAdapter()
         {
-            Client = new BluetoothClient();
         }
 
         public BluetoothAdapter(BluetoothDeviceInfo deviceInfo)
@@ -46,6 +45,11 @@ namespace Bluetooth
                 {
                     ep = new BluetoothEndPoint(Device.DeviceAddress, BluetoothService.SerialPort);
                 }
+                if (Client == null)
+                {
+                    Client = new BluetoothClient();
+                }
+
                 Client.Connect(ep);
                 connected = true;
             }
@@ -65,6 +69,8 @@ namespace Bluetooth
             try
             {
                 Client.Dispose();
+                ep = null;
+                Client = null;
                 disconnected = true;
             }
             catch (Exception ex)
@@ -77,6 +83,10 @@ namespace Bluetooth
 
         public BluetoothDeviceInfo[] DiscoverDevices()
         {
+            if (Client == null)
+            {
+                Client = new BluetoothClient();
+            }
             Peers = Client.DiscoverDevices();
             return Peers;
         }

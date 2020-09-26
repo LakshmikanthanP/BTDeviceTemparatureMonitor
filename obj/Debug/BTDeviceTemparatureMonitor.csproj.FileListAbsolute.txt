@@ -12,3 +12,12 @@ C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\obj\Debug\BTDeviceTemp
 C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\obj\Debug\BTDeviceTemparatureMonitor.exe
 C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\obj\Debug\BTDeviceTemparatureMonitor.pdb
 C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\obj\Debug\BTDeviceTemparatureMonitor.csprojAssemblyReference.cache
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\bin\Debug\Newtonsoft.Json.dll
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\bin\Debug\Twilio.dll
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\bin\Debug\Newtonsoft.Json.xml
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\bin\Debug\Twilio.xml

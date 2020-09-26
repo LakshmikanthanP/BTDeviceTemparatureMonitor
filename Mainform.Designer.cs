@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint13 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint14 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint15 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint16 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint17 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint18 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint19 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint20 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint21 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint22 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint23 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint24 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
             this.cbBTDevices = new System.Windows.Forms.ComboBox();
             this.btnDiscover = new System.Windows.Forms.Button();
             this.btnConnect = new System.Windows.Forms.Button();
@@ -56,8 +56,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabChart = new System.Windows.Forms.TabControl();
             this.pgConnectivity = new System.Windows.Forms.TabPage();
+            this.panelAlerts = new System.Windows.Forms.Panel();
+            this.lblNotification = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpBoxSettings = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.chkTelegram = new System.Windows.Forms.CheckBox();
+            this.chkSMS = new System.Windows.Forms.CheckBox();
+            this.chkEmail = new System.Windows.Forms.CheckBox();
+            this.txtAlertVal = new System.Windows.Forms.TextBox();
+            this.lblAlertValue = new System.Windows.Forms.Label();
             this.lbConnectionStatus = new System.Windows.Forms.Label();
             this.pgConnectionTest = new System.Windows.Forms.TabPage();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pgHumidProgress = new System.Windows.Forms.ProgressBar();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblHumidity = new System.Windows.Forms.Label();
@@ -77,6 +89,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gaugeTemparature = new System.Windows.Forms.AGauge();
+            this.verticalProgressBar1 = new BTDeviceTemparatureMonitor.VerticalProgressBar();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.chartHumidity = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartTemparature = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -86,11 +99,17 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.pgHumidProgress = new System.Windows.Forms.ProgressBar();
-            this.verticalProgressBar1 = new BTDeviceTemparatureMonitor.VerticalProgressBar();
+            this.label13 = new System.Windows.Forms.Label();
+            this.gaugeHumidity = new BTDeviceTemparatureMonitor.CircularProgressBar();
+            this.verticalProgressBar2 = new BTDeviceTemparatureMonitor.VerticalProgressBar();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.tabChart.SuspendLayout();
             this.pgConnectivity.SuspendLayout();
+            this.panelAlerts.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.grpBoxSettings.SuspendLayout();
             this.pgConnectionTest.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -106,7 +125,7 @@
             // cbBTDevices
             // 
             this.cbBTDevices.FormattingEnabled = true;
-            this.cbBTDevices.Location = new System.Drawing.Point(33, 29);
+            this.cbBTDevices.Location = new System.Drawing.Point(18, 21);
             this.cbBTDevices.Name = "cbBTDevices";
             this.cbBTDevices.Size = new System.Drawing.Size(142, 21);
             this.cbBTDevices.TabIndex = 0;
@@ -114,7 +133,7 @@
             // 
             // btnDiscover
             // 
-            this.btnDiscover.Location = new System.Drawing.Point(181, 27);
+            this.btnDiscover.Location = new System.Drawing.Point(166, 19);
             this.btnDiscover.Name = "btnDiscover";
             this.btnDiscover.Size = new System.Drawing.Size(75, 23);
             this.btnDiscover.TabIndex = 1;
@@ -125,7 +144,7 @@
             // btnConnect
             // 
             this.btnConnect.Enabled = false;
-            this.btnConnect.Location = new System.Drawing.Point(262, 27);
+            this.btnConnect.Location = new System.Drawing.Point(247, 19);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(75, 23);
             this.btnConnect.TabIndex = 2;
@@ -136,7 +155,7 @@
             // btnDisconnect
             // 
             this.btnDisconnect.Enabled = false;
-            this.btnDisconnect.Location = new System.Drawing.Point(343, 27);
+            this.btnDisconnect.Location = new System.Drawing.Point(328, 19);
             this.btnDisconnect.Name = "btnDisconnect";
             this.btnDisconnect.Size = new System.Drawing.Size(75, 23);
             this.btnDisconnect.TabIndex = 3;
@@ -146,16 +165,16 @@
             // 
             // txtDisplay
             // 
-            this.txtDisplay.Location = new System.Drawing.Point(33, 92);
+            this.txtDisplay.Location = new System.Drawing.Point(33, 103);
             this.txtDisplay.Multiline = true;
             this.txtDisplay.Name = "txtDisplay";
             this.txtDisplay.ReadOnly = true;
-            this.txtDisplay.Size = new System.Drawing.Size(364, 192);
+            this.txtDisplay.Size = new System.Drawing.Size(364, 264);
             this.txtDisplay.TabIndex = 4;
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(322, 303);
+            this.btnSend.Location = new System.Drawing.Point(325, 386);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(75, 23);
             this.btnSend.TabIndex = 5;
@@ -165,7 +184,7 @@
             // 
             // txtSend
             // 
-            this.txtSend.Location = new System.Drawing.Point(34, 303);
+            this.txtSend.Location = new System.Drawing.Point(37, 386);
             this.txtSend.Name = "txtSend";
             this.txtSend.Size = new System.Drawing.Size(282, 20);
             this.txtSend.TabIndex = 6;
@@ -174,7 +193,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(34, 73);
+            this.label1.Location = new System.Drawing.Point(34, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 7;
@@ -195,15 +214,15 @@
             // pgConnectivity
             // 
             this.pgConnectivity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pgConnectivity.Controls.Add(this.panelAlerts);
+            this.pgConnectivity.Controls.Add(this.groupBox1);
+            this.pgConnectivity.Controls.Add(this.grpBoxSettings);
             this.pgConnectivity.Controls.Add(this.lbConnectionStatus);
-            this.pgConnectivity.Controls.Add(this.cbBTDevices);
             this.pgConnectivity.Controls.Add(this.label1);
-            this.pgConnectivity.Controls.Add(this.btnDiscover);
             this.pgConnectivity.Controls.Add(this.txtSend);
-            this.pgConnectivity.Controls.Add(this.btnConnect);
             this.pgConnectivity.Controls.Add(this.btnSend);
-            this.pgConnectivity.Controls.Add(this.btnDisconnect);
             this.pgConnectivity.Controls.Add(this.txtDisplay);
+            this.pgConnectivity.Cursor = System.Windows.Forms.Cursors.Default;
             this.pgConnectivity.Location = new System.Drawing.Point(4, 22);
             this.pgConnectivity.Name = "pgConnectivity";
             this.pgConnectivity.Padding = new System.Windows.Forms.Padding(3);
@@ -211,12 +230,124 @@
             this.pgConnectivity.TabIndex = 0;
             this.pgConnectivity.Text = "Connectivity";
             // 
+            // panelAlerts
+            // 
+            this.panelAlerts.Controls.Add(this.lblNotification);
+            this.panelAlerts.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelAlerts.ForeColor = System.Drawing.Color.Yellow;
+            this.panelAlerts.Location = new System.Drawing.Point(3, 3);
+            this.panelAlerts.Name = "panelAlerts";
+            this.panelAlerts.Size = new System.Drawing.Size(711, 19);
+            this.panelAlerts.TabIndex = 11;
+            // 
+            // lblNotification
+            // 
+            this.lblNotification.AutoSize = true;
+            this.lblNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotification.Location = new System.Drawing.Point(247, 1);
+            this.lblNotification.Name = "lblNotification";
+            this.lblNotification.Size = new System.Drawing.Size(148, 18);
+            this.lblNotification.TabIndex = 0;
+            this.lblNotification.Text = "AlertNotificationPanel";
+            this.lblNotification.Visible = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnConnect);
+            this.groupBox1.Controls.Add(this.btnDisconnect);
+            this.groupBox1.Controls.Add(this.btnDiscover);
+            this.groupBox1.Controls.Add(this.cbBTDevices);
+            this.groupBox1.Location = new System.Drawing.Point(16, 29);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(419, 55);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "DeviceConnection";
+            // 
+            // grpBoxSettings
+            // 
+            this.grpBoxSettings.BackColor = System.Drawing.Color.Transparent;
+            this.grpBoxSettings.Controls.Add(this.label12);
+            this.grpBoxSettings.Controls.Add(this.chkTelegram);
+            this.grpBoxSettings.Controls.Add(this.chkSMS);
+            this.grpBoxSettings.Controls.Add(this.chkEmail);
+            this.grpBoxSettings.Controls.Add(this.txtAlertVal);
+            this.grpBoxSettings.Controls.Add(this.lblAlertValue);
+            this.grpBoxSettings.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.grpBoxSettings.Location = new System.Drawing.Point(457, 29);
+            this.grpBoxSettings.Name = "grpBoxSettings";
+            this.grpBoxSettings.Size = new System.Drawing.Size(236, 90);
+            this.grpBoxSettings.TabIndex = 9;
+            this.grpBoxSettings.TabStop = false;
+            this.grpBoxSettings.Text = "Settings";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label12.Location = new System.Drawing.Point(129, 23);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(39, 13);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "celsius";
+            // 
+            // chkTelegram
+            // 
+            this.chkTelegram.AutoSize = true;
+            this.chkTelegram.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.chkTelegram.Location = new System.Drawing.Point(122, 53);
+            this.chkTelegram.Name = "chkTelegram";
+            this.chkTelegram.Size = new System.Drawing.Size(70, 17);
+            this.chkTelegram.TabIndex = 4;
+            this.chkTelegram.Text = "Telegram";
+            this.chkTelegram.UseVisualStyleBackColor = true;
+            // 
+            // chkSMS
+            // 
+            this.chkSMS.AutoSize = true;
+            this.chkSMS.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.chkSMS.Location = new System.Drawing.Point(67, 53);
+            this.chkSMS.Name = "chkSMS";
+            this.chkSMS.Size = new System.Drawing.Size(49, 17);
+            this.chkSMS.TabIndex = 3;
+            this.chkSMS.Text = "SMS";
+            this.chkSMS.UseVisualStyleBackColor = true;
+            // 
+            // chkEmail
+            // 
+            this.chkEmail.AutoSize = true;
+            this.chkEmail.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.chkEmail.Location = new System.Drawing.Point(10, 53);
+            this.chkEmail.Name = "chkEmail";
+            this.chkEmail.Size = new System.Drawing.Size(51, 17);
+            this.chkEmail.TabIndex = 2;
+            this.chkEmail.Text = "Email";
+            this.chkEmail.UseVisualStyleBackColor = true;
+            // 
+            // txtAlertVal
+            // 
+            this.txtAlertVal.Location = new System.Drawing.Point(69, 20);
+            this.txtAlertVal.Name = "txtAlertVal";
+            this.txtAlertVal.Size = new System.Drawing.Size(54, 20);
+            this.txtAlertVal.TabIndex = 1;
+            this.txtAlertVal.Text = "48";
+            // 
+            // lblAlertValue
+            // 
+            this.lblAlertValue.AutoSize = true;
+            this.lblAlertValue.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblAlertValue.Location = new System.Drawing.Point(7, 20);
+            this.lblAlertValue.Name = "lblAlertValue";
+            this.lblAlertValue.Size = new System.Drawing.Size(55, 13);
+            this.lblAlertValue.TabIndex = 0;
+            this.lblAlertValue.Text = "AlertValue";
+            // 
             // lbConnectionStatus
             // 
             this.lbConnectionStatus.AutoSize = true;
             this.lbConnectionStatus.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbConnectionStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lbConnectionStatus.Location = new System.Drawing.Point(441, 145);
+            this.lbConnectionStatus.Location = new System.Drawing.Point(447, 219);
             this.lbConnectionStatus.Name = "lbConnectionStatus";
             this.lbConnectionStatus.Size = new System.Drawing.Size(210, 27);
             this.lbConnectionStatus.TabIndex = 8;
@@ -245,6 +376,23 @@
             this.pgConnectionTest.Size = new System.Drawing.Size(717, 448);
             this.pgConnectionTest.TabIndex = 1;
             this.pgConnectionTest.Text = "DashBoard";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label11.Location = new System.Drawing.Point(388, 301);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(84, 13);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Current Humidity";
+            // 
+            // pgHumidProgress
+            // 
+            this.pgHumidProgress.Location = new System.Drawing.Point(478, 294);
+            this.pgHumidProgress.Name = "pgHumidProgress";
+            this.pgHumidProgress.Size = new System.Drawing.Size(192, 28);
+            this.pgHumidProgress.TabIndex = 13;
             // 
             // pictureBox2
             // 
@@ -375,6 +523,12 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tabPage1.Controls.Add(this.label16);
+            this.tabPage1.Controls.Add(this.label15);
+            this.tabPage1.Controls.Add(this.label14);
+            this.tabPage1.Controls.Add(this.verticalProgressBar2);
+            this.tabPage1.Controls.Add(this.gaugeHumidity);
+            this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.panel1);
@@ -462,6 +616,13 @@
             this.gaugeTemparature.Text = "aGauge1";
             this.gaugeTemparature.Value = 0F;
             // 
+            // verticalProgressBar1
+            // 
+            this.verticalProgressBar1.Location = new System.Drawing.Point(298, 77);
+            this.verticalProgressBar1.Name = "verticalProgressBar1";
+            this.verticalProgressBar1.Size = new System.Drawing.Size(23, 193);
+            this.verticalProgressBar1.TabIndex = 3;
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -476,66 +637,66 @@
             // 
             // chartHumidity
             // 
-            chartArea1.AxisX.LineColor = System.Drawing.Color.ForestGreen;
-            chartArea1.AxisY.LineColor = System.Drawing.Color.Firebrick;
-            chartArea1.AxisY.Maximum = 100D;
-            chartArea1.AxisY.Minimum = 0D;
-            chartArea1.Name = "ChartArea1";
-            this.chartHumidity.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartHumidity.Legends.Add(legend1);
+            chartArea3.AxisX.LineColor = System.Drawing.Color.ForestGreen;
+            chartArea3.AxisY.LineColor = System.Drawing.Color.Firebrick;
+            chartArea3.AxisY.Maximum = 100D;
+            chartArea3.AxisY.Minimum = 0D;
+            chartArea3.Name = "ChartArea1";
+            this.chartHumidity.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartHumidity.Legends.Add(legend3);
             this.chartHumidity.Location = new System.Drawing.Point(358, 59);
             this.chartHumidity.Name = "chartHumidity";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "LiveHumidity";
-            dataPoint1.IsEmpty = true;
-            dataPoint2.IsEmpty = true;
-            dataPoint3.IsEmpty = true;
-            dataPoint4.IsEmpty = true;
-            dataPoint5.IsEmpty = true;
-            dataPoint6.IsEmpty = true;
-            series1.Points.Add(dataPoint1);
-            series1.Points.Add(dataPoint2);
-            series1.Points.Add(dataPoint3);
-            series1.Points.Add(dataPoint4);
-            series1.Points.Add(dataPoint5);
-            series1.Points.Add(dataPoint6);
-            this.chartHumidity.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "LiveHumidity";
+            dataPoint13.IsEmpty = true;
+            dataPoint14.IsEmpty = true;
+            dataPoint15.IsEmpty = true;
+            dataPoint16.IsEmpty = true;
+            dataPoint17.IsEmpty = true;
+            dataPoint18.IsEmpty = true;
+            series3.Points.Add(dataPoint13);
+            series3.Points.Add(dataPoint14);
+            series3.Points.Add(dataPoint15);
+            series3.Points.Add(dataPoint16);
+            series3.Points.Add(dataPoint17);
+            series3.Points.Add(dataPoint18);
+            this.chartHumidity.Series.Add(series3);
             this.chartHumidity.Size = new System.Drawing.Size(346, 324);
             this.chartHumidity.TabIndex = 1;
             this.chartHumidity.Text = "chart1";
             // 
             // chartTemparature
             // 
-            chartArea2.AxisX.LineColor = System.Drawing.Color.ForestGreen;
-            chartArea2.AxisY.LineColor = System.Drawing.Color.Firebrick;
-            chartArea2.AxisY.Maximum = 100D;
-            chartArea2.AxisY.Minimum = 0D;
-            chartArea2.Name = "ChartArea1";
-            this.chartTemparature.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartTemparature.Legends.Add(legend2);
+            chartArea4.AxisX.LineColor = System.Drawing.Color.ForestGreen;
+            chartArea4.AxisY.LineColor = System.Drawing.Color.Firebrick;
+            chartArea4.AxisY.Maximum = 100D;
+            chartArea4.AxisY.Minimum = 0D;
+            chartArea4.Name = "ChartArea1";
+            this.chartTemparature.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartTemparature.Legends.Add(legend4);
             this.chartTemparature.Location = new System.Drawing.Point(6, 59);
             this.chartTemparature.Name = "chartTemparature";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "LiveTemparature";
-            dataPoint7.IsEmpty = true;
-            dataPoint8.IsEmpty = true;
-            dataPoint9.IsEmpty = true;
-            dataPoint10.IsEmpty = true;
-            dataPoint11.IsEmpty = true;
-            dataPoint12.IsEmpty = true;
-            series2.Points.Add(dataPoint7);
-            series2.Points.Add(dataPoint8);
-            series2.Points.Add(dataPoint9);
-            series2.Points.Add(dataPoint10);
-            series2.Points.Add(dataPoint11);
-            series2.Points.Add(dataPoint12);
-            this.chartTemparature.Series.Add(series2);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Legend = "Legend1";
+            series4.Name = "LiveTemparature";
+            dataPoint19.IsEmpty = true;
+            dataPoint20.IsEmpty = true;
+            dataPoint21.IsEmpty = true;
+            dataPoint22.IsEmpty = true;
+            dataPoint23.IsEmpty = true;
+            dataPoint24.IsEmpty = true;
+            series4.Points.Add(dataPoint19);
+            series4.Points.Add(dataPoint20);
+            series4.Points.Add(dataPoint21);
+            series4.Points.Add(dataPoint22);
+            series4.Points.Add(dataPoint23);
+            series4.Points.Add(dataPoint24);
+            this.chartTemparature.Series.Add(series4);
             this.chartTemparature.Size = new System.Drawing.Size(346, 324);
             this.chartTemparature.TabIndex = 0;
             this.chartTemparature.Text = "chart1";
@@ -584,29 +745,71 @@
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             // 
-            // label11
+            // label13
             // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label11.Location = new System.Drawing.Point(388, 301);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 13);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Current Humidity";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label13.Location = new System.Drawing.Point(40, 30);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(210, 20);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Current Temparature Gauge";
             // 
-            // pgHumidProgress
+            // gaugeHumidity
             // 
-            this.pgHumidProgress.Location = new System.Drawing.Point(478, 294);
-            this.pgHumidProgress.Name = "pgHumidProgress";
-            this.pgHumidProgress.Size = new System.Drawing.Size(192, 28);
-            this.pgHumidProgress.TabIndex = 13;
+            this.gaugeHumidity.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.gaugeHumidity.Location = new System.Drawing.Point(414, 53);
+            this.gaugeHumidity.Maximum = ((long)(100));
+            this.gaugeHumidity.MinimumSize = new System.Drawing.Size(100, 100);
+            this.gaugeHumidity.Name = "gaugeHumidity";
+            this.gaugeHumidity.ProgressColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.gaugeHumidity.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.gaugeHumidity.ProgressShape = BTDeviceTemparatureMonitor.CircularProgressBar._ProgressShape.Round;
+            this.gaugeHumidity.Size = new System.Drawing.Size(230, 230);
+            this.gaugeHumidity.TabIndex = 7;
+            this.gaugeHumidity.Text = "circularProgressBar1";
+            this.gaugeHumidity.Value = ((long)(0));
             // 
-            // verticalProgressBar1
+            // verticalProgressBar2
             // 
-            this.verticalProgressBar1.Location = new System.Drawing.Point(298, 77);
-            this.verticalProgressBar1.Name = "verticalProgressBar1";
-            this.verticalProgressBar1.Size = new System.Drawing.Size(23, 193);
-            this.verticalProgressBar1.TabIndex = 3;
+            this.verticalProgressBar2.Location = new System.Drawing.Point(676, 74);
+            this.verticalProgressBar2.Name = "verticalProgressBar2";
+            this.verticalProgressBar2.Size = new System.Drawing.Size(23, 193);
+            this.verticalProgressBar2.TabIndex = 8;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Poor Richard", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Green;
+            this.label14.Location = new System.Drawing.Point(682, 289);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(17, 19);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "0";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Poor Richard", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label15.Location = new System.Drawing.Point(672, 51);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(30, 19);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "100";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label16.Location = new System.Drawing.Point(434, 30);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(180, 20);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "Current Humidity Gauge";
             // 
             // Mainform
             // 
@@ -614,13 +817,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(743, 488);
             this.Controls.Add(this.tabChart);
-            this.MaximumSize = new System.Drawing.Size(1300, 800);
+            this.MaximumSize = new System.Drawing.Size(800, 530);
             this.Name = "Mainform";
-            this.Text = "MiniBTProject";
+            this.Text = "EnviTracker";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabChart.ResumeLayout(false);
             this.pgConnectivity.ResumeLayout(false);
             this.pgConnectivity.PerformLayout();
+            this.panelAlerts.ResumeLayout(false);
+            this.panelAlerts.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.grpBoxSettings.ResumeLayout(false);
+            this.grpBoxSettings.PerformLayout();
             this.pgConnectionTest.ResumeLayout(false);
             this.pgConnectionTest.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -684,6 +892,22 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chartHumidity;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ProgressBar pgHumidProgress;
+        private System.Windows.Forms.GroupBox grpBoxSettings;
+        private System.Windows.Forms.Label lblAlertValue;
+        private System.Windows.Forms.CheckBox chkTelegram;
+        private System.Windows.Forms.CheckBox chkSMS;
+        private System.Windows.Forms.CheckBox chkEmail;
+        private System.Windows.Forms.TextBox txtAlertVal;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panelAlerts;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblNotification;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private VerticalProgressBar verticalProgressBar2;
+        private CircularProgressBar gaugeHumidity;
     }
 }
 

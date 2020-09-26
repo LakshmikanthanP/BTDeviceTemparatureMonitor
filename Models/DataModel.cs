@@ -77,7 +77,6 @@ namespace BTDeviceTemparatureMonitor.Models
                     //NotifyPropertyChanged();
                     var args = new TemparatureEventArgs();
                     args.currrentTemp = this.CurrentTemparature;
-                    args.HighestTemp = this.HighestTemparature;
                     CurrentTemparatureChanged(this, args);
                 }
             }
@@ -97,7 +96,6 @@ namespace BTDeviceTemparatureMonitor.Models
                     this.mHighestTemparature = value;
                     //NotifyPropertyChanged();
                     var args = new TemparatureEventArgs();
-                    args.currrentTemp = this.CurrentTemparature;
                     args.HighestTemp = this.HighestTemparature;
                     HighestTemparatureChanged(this, args);
                 }
@@ -140,13 +138,13 @@ namespace BTDeviceTemparatureMonitor.Models
         public void DisConnectDevice()
         {
             BtAdapter.Disconnect();
+            peerStream.FlushAsync();
         }
 
         public void PollSensorData()
         {
             int[] receivedpacket;
-
-            
+        
             packetstream.TryDequeue(out receivedpacket);
 
             if (receivedpacket != null)

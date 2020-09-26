@@ -1,0 +1,13 @@
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\bin\Debug\BTDeviceTemparatureMonitor.exe.config
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\bin\Debug\BTDeviceTemparatureMonitor.exe
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\bin\Debug\BTDeviceTemparatureMonitor.pdb
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\bin\Debug\AGauge.dll
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\bin\Debug\InTheHand.Net.Personal.dll
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\bin\Debug\InTheHand.Net.Personal.xml
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\obj\Debug\BTDeviceWeatherMonitor.Mainform.resources
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\obj\Debug\BTDeviceTemparatureMonitor.Properties.Resources.resources
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\obj\Debug\BTDeviceWeatherMonitor.csproj.GenerateResource.cache
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\obj\Debug\BTDeviceWeatherMonitor.csproj.CoreCompileInputs.cache
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\obj\Debug\BTDeviceWeatherMonitor.csproj.CopyComplete
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\obj\Debug\BTDeviceTemparatureMonitor.exe
+C:\EmbeddedCourse\FinalProject\BTDeviceTemparatureMonitor\obj\Debug\BTDeviceTemparatureMonitor.pdb
